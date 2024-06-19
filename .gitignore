@@ -1,0 +1,6 @@
+# files generated when compiling .tex files
+*.aux
+*.log
+*.out
+*.gz
+*.pdf
