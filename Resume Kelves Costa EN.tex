@@ -1,296 +1,175 @@
 %-------------------------
 % Resume in Latex
 % Author : Kelves N C
-% Original Author : Vaishanth
+% Based on : Vaishanth R (Overleaf: Resume Professional Template - Software
+%Engineer)
 % License : MIT
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{fontawesome5}
-\usepackage{multicol}
-\usepackage{graphicx}%\setmainfont{Times New Roman}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
-
-\RequirePackage{tikz}
-\RequirePackage{xcolor}
-
-\definecolor{cvblue}{HTML}{0E5484}
-\definecolor{black}{HTML}{130810}
-\definecolor{darkcolor}{HTML}{0F4539}
-\definecolor{cvgreen}{HTML}{3BD80D}
-\definecolor{taggreen}{HTML}{00E278}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\colorlet{name}{black}
-\colorlet{tagline}{darkcolor}
-\colorlet{heading}{darkcolor}
-\colorlet{headingrule}{cvblue}
-\colorlet{accent}{darkcolor}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% \usepackage[T1]{fontenc}
-% \usepackage[T1]{fontenc}
-% \usepackage{cochineal}
-% \usepackage{fourier}
-
-% \usepackage{fontspec}
-% \usepackage{polyglossia}
-% \setmainlanguage{german}
-% \setmainfont{Times New Roman}
-
-% serif
-\usepackage{CormorantGaramond}
-\usepackage{charter}
-
-% \pagestyle{fancy}
-% \fancyhf{}  % clear all header and footer fields
-% \fancyfoot{}
-% \renewcommand{\headrulewidth}{0pt}
-% \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
-\urlstyle{same}
-
-\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------- CUSTOM COMMANDS ----------
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-1pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\large#1} & \textbf{\small #2} \\
-      \textit{\large#3} & \textit{\small #4} \\
-      
-    \end{tabular*}\vspace{-7pt}
-}
+\input{config.tex}
 
 
-\newcommand{\resumeSingleSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{\large#1} & \textbf{\small #2} \\
-      
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.1in]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
-
-%\usepackage{fontspec}
 %%%%%%%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%
-
 \begin{document}
+
 %----------HEADING----------
-
-
 \begin{center}
-    {\huge Kelves Nunes da Costa} \\ \vspace{2pt} 
-    {+55 (81) 9 9775 2616} ~ 
-    \small{-}
-    \href{mailto:[kelves.nunes@gmail.com]}{\color{blue}{kelves.nunes@gmail.com}} ~ 
-    \small{-}
-    \href{[linkedin.com/in/kelvescosta/]}{ \color{blue}{LinkedIn Profile}}  ~
-    \small{-}
-	\href{[https://github.com/kelvesc]}{\color{blue}{GitHub Profile}} ~ 
-%    \small{-}
-%    \href{[url to github profile]}{ \color{blue}{github.com/username}} ~
-    \vspace{-7pt}
+{\huge Kelves Nunes da Costa}
+\linebreak
+\href{mailto:[kelves.nunes@gmail.com]}{kelves.nunes@gmail.com }
+\small{$\vert$}
+\href{https://www.linkedin.com/in/kelvescosta/}{linkedin.com/in/kelvescosta}
+\linebreak
+\href{https://github.com/kelvesc}{github.com/kelvesc}
+\small{$\vert$}
+{Pernambuco, Brasil}
 \end{center}
 
+
 %-----------EDUCATION-----------
-\section{\color{airforceblue}EDUCATION}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Universidade Federal Rural de Pernambuco}{Recife, Pernambuco, BR}
-      {Bacharelado em Sistemas de Informação}{Jul 2019 - Dec 2025}
-    \vspace{-4pt}
-     \resumeSubheading
-      {Universidade Federal de Pernambuco}{Recife, Pernambuco, BR}
-      {Especialização em Fotografia Computacional com foco em Inteligência Artificial}{Month 2023 - Month 2024}
-  \resumeSubHeadingListEnd
-  \vspace{-10pt}
+\section{\texorpdfstring{EDUCATION}{EDUCATION}}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Universidade Federal Rural de Pernambuco}{Recife, Pernambuco, BR}
+{Bachelor of Information Systems}{Jul 2019 - Dec 2025}
+
+\resumeSubheading
+{Universidade Federal de Pernambuco}{Recife, Pernambuco, BR}
+{Specialization in Computational Photography}{Sep 2023 - Nov 2024}
+\textit{\large{with focus on Artificial Intelligence}}
+%      {Especialização em Fotografia Computacional}{Sep 2023 - Nov 2024}
+%      {\normalsize com foco em Inteligência Artificial}{\newline}
+
+\resumeSubHeadingListEnd
+
 
 %-----------PROGRAMMING SKILLS-----------
-\section{\color{airforceblue}TECHNICAL SKILLS}
- \begin{itemize}[leftmargin=0in, label={}]
-    \small{\item{
-     \textbf{\normalsize{Programming Languages:}}{ \normalsize{Python, C++}} \\
-      \vspace{1.2pt}
-     
-     \textbf{\normalsize{Libraries and Tools:}}{ \normalsize{PyTorch, Pandas, Numpy, OpenCV, Git}} \\
-      \vspace{1.2pt}
-      
-     \textbf{\normalsize{Learning:}}{ \normalsize{Halide, CUDA, Sklearn, Polars, PyTest}} \\
-      \vspace{1.2pt}
-      
-%     \textbf{\normalsize{ML Architectures:}}{ \normalsize{CNN, YOLO, Transformers(BERT, LSTM), RAFT}}
+\section{\texorpdfstring{TECHNICAL SKILLS}{TECHNICAL SKILLS}}
+\begin{itemize}[leftmargin=0in, label={}, itemsep=0pt]
+%itemsep controls spacing between items
+\small{
+	\item \textbf{Programming Languages:} {Python, C++, Bash, SQL}
+	\item \textbf{Libraries and Tools:} {Git, Numpy, Pandas, PyTorch,
+	OpenCV, TensorFlow}
+	\item \textbf{Learning:} {CUDA, Halide, Polars, PyTest, scikit-learn}
+	\item \textbf{Next Steps:} {AdaptiveCPP, MLFlow, MMCV, NCNN, Robot}
+}
+\end{itemize}
 
-     % copy and paste above textbf block to add more 
-     }}
- \end{itemize}
- \vspace{-16pt}
- 
+
  %-----------EXPERIENCE-----------
-\section{\color{airforceblue}WORK EXPERIENCE}
-  \resumeSubHeadingListStart
+\section{\texorpdfstring{WORK EXPERIENCE}{WORK EXPERIENCE}}
+\resumeSubHeadingListStart
 
-    \resumeSubheading
-      {QA Engenieer - Automation and Manual}{} 
-      {Projeto Cin-Motorola, Pernambuco, Brasil}{Nov 2021 - Today}
-      \resumeItemListStart
-            \resumeItem{\normalsize{Effectively raised and followed up Change Requests, as well as managed tasks using the JIRA.}}
-            \resumeItem{\normalsize{Proposed and implemented new tests as well as refactored existing test cases impacting products development.}}
-            \resumeItem{\normalsize{Proposed and assisted in the implementation of internal process improvements.}}  
-            \resumeItem{\normalsize{Led technical training session and assisted team members in enhancing both their technical and interpersonal skills.}}  
-      \resumeItemListEnd  
+\resumeSubheading
+{QA Engineer - Automation and Manual}{}
+{CIn-Motorola, Pernambuco, Brasil}{Nov 2021 - Today}
+\resumeItemListStart
+\small{
+	\resumeItem{Worked with Product Managers to elucidate requirements and
+	usability goals.}
+	\resumeItem{Contributed and communicated with overseas development teams.}
+	\resumeItem{Designed use cases according to costumer requirements.}
+   	\resumeItem{Designed, developed and maintained test cases around identified
+   	use cases and executed them.}
+   	\resumeItem{Effectively raised and followed up bug reports and managed tasks
+   	using JIRA.}
+   	\resumeItem{Played a part in several testing strategies such as regression,
+   	sanity, integration and exploratory testing.}
+	\resumeItem{Documented test strategies, as well as some teams internals
+	"how
+	to".}
+	\resumeItem{Assisted in mentoring for team members to enhancing their
+	skills
+	and strategy follow up.}
+  	}
+\resumeItemListEnd
 
-    \resumeSubheading
-      {QA Intern}{} 
-	  {Projeto Cin-Motorola, Pernambuco, Brasil}{Jan 2021 - Nov 2021}
-      \resumeItemListStart
-            \resumeItem{\normalsize{Generated detailed reports on identified failures, reported bugs, and supported the development team using Jira.}}
-            \resumeItem{\normalsize{Proposed and assisted in the implementation of internal process improvements.}}  
-            \resumeItem{\normalsize{Assisted newer team members during their onboard process.}}  
-      \resumeItemListEnd  
+\resumeSubheading
+{QA Intern}{}
+{CIn-Motorola, Pernambuco, Brasil}{Jan 2021 - Nov 2021}
+\resumeItemListStart
+\small{
+	\resumeItem{Execution of testing strategies aimed at the Android operating
+	system.}
+	\resumeItem{Raised reports on identified failures and tracked issues using
+	Jira.}
+	\resumeItem{Made collaborations with overseas development teams.}
+	\resumeItem{Proposed and assisted in the implementation of internal
+	process
+	improvements.}
+	\resumeItem{Assisted new team members during their onboard process.}
+}
+\resumeItemListEnd
+  % copy and paste above resumeSubheading block to add more
 
-%    \resumeSubheading
-%      {Job 3 Title}{} 
-%      {Company Name, State, Country}{Month Year - Month Year}
-%      \resumeItemListStart
-%            \resumeItem{\normalsize{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo eget nunc ultricies congue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.}}
-%            \resumeItem{\normalsize{nteger hendrerit semper velit, non vehicula nibh feugiat nec. Vivamus nec consequat nisi. Suspendisse potenti. Sed consectetur elit sed aliquam eleifend.}}  
-%            \resumeItem{\normalsize{Sed nec quam et urna placerat placerat. Aenean at mi id nunc venenatis feugiat}}  
-%      \resumeItemListEnd  
-
-    % copy and paste above resumeSubheading block to add more 
-  \resumeSubHeadingListEnd
-\vspace{-12pt}
+\resumeSubHeadingListEnd
 
 
  %-----------PROJECTS-----------
-\section{\color{airforceblue}PROJECTS}    
-    \resumeItemListStart
-        \vspace{0.5pt}
-        
-        \resumeItem{\normalsize{\textbf{Image Processing(WIP)}: Series of experiments with Image Processing using Halide to learn the language features and to create pipelines where images (and any kind of digital signal)  are processed. Github repository:}  \href{[https://github.com/kelvesc/Image-Processing-14051]}{\color{blue}\underline{here}}}
-        \vspace{-5pt}
-        
-        \resumeItem{\normalsize{\textbf{TuneTap(WIP)}: AI powered tool to automatically create Spotify playlists with a minimum of user interaction. This tool is being developed using Python and Streamlit. A dummy mobile app is under development with the use of Flutter. GitHub repository:} \href{[https://github.com/kelvesc/Data-Analysis-PISI3-14342]}{\color{blue}\underline{here}}}
-        \vspace{-5pt}
-        
-%        \resumeItem{\normalsize{\textbf{Sign Language Recognition}: Use of state of the art Deep Learning approach to recognize Brazilian sign language. GitHub repository:} \href{[https://github.com/kelvesc/TD-GCN-Gesture-LIBRASIL]}{\color{blue}\underline{here}}}
-%        \vspace{-5pt}
+\section{\texorpdfstring{PROJECTS}{PROJECTS}}
 
-        % copy and paste above resumeItem block to add more 
-        
-    \resumeItemListEnd  
-   
-\vspace{-8pt}
-%
+\resumeItemListStart
 
-%-----------Publications---------------
-\section{\color{airforceblue}PUBLICATIONS}
-    
-  \resumeItemListStart
-    
-    \resumeItem{\normalsize{Searching for the opportunity to make my first collaboration.} \href{[http://lattes.cnpq.br/0278549043500928]}{\color{blue}\underline{Lattes}}}
-    \vspace{-5pt}
-%    
-%    \resumeItem{\normalsize{Add Publication details here}}\href{[url link to publication]}{\color{blue}\underline{Link}}
-%    \vspace{-5pt}
-%
-%    % copy and paste above resumeItem block to add more 
-%    
-  \resumeItemListEnd 
-%      
-%\vspace{-8pt}
+\resumeItem{\textbf{Image Quality Analysis:} Used pyiqa to assess Neural
+Network outputs and leveraged other Neural Nets as evaluators during training.}
+
+\resumeItem{\textbf{Heterogeneous Systems:} Developed custom CUDA kernels for
+data management and transformation on NVIDIA GPUs.}
+
+\resumeItem{\textbf{Halide:} Built an image processing pipeline for
+cartoonization to showcase Halide’s custom operator capabilities.}
+
+\resumeItem{\textbf{Deep Learning:} Applied MLP for classification and UNet
+for
+restoration and segmentation.}
+
+\resumeItem{\textbf{OpenCV:} Created an image processing pipeline for
+cartoonization.}
+
+% copy and paste above resumeItem block to add more
+\resumeItemListEnd
+
 
 %-----------EXTRACURRICULAR---------------
-\section{\color{airforceblue}EXTRACURRICULAR ACTIVITIES}
-    
-      \resumeItemListStart
-        \resumeItem{\normalsize{\textbf{Participant} in Motorola's 50 years anniversary Hackaton - {Nov 2023} }} 
-        \vspace{-5pt}
-        
-%        \resumeItem{\normalsize{\textbf{Executive member} in Robotics Club - } {Month Year - Month Year}}    
-%        \vspace{-5pt}
+\section{\texorpdfstring{EXTRACURRICULAR ACTIVITIES}{EXTRACURRICULAR
+ACTIVITIES}}
+\resumeSubHeadingListStart
 
-        % copy and paste above resumeItem block to add more 
-      \resumeItemListEnd 
-      
-\vspace{-12pt}
+\resumeProjectHeading
+{Motorola's 50 years anniversary Hackaton}{Nov 2023}
+During this 3 days hackaton, our team developed a prototype for a new
+Bluetooth
+headset feature on Android devices, creating a more immersive and interactive
+audio experience. We implemented dynamic sound panning and displacement
+effects, adjusted in real time based on the user's movement relative to the
+paired device, enhancing the sense of presence and realism.
 
+\resumeProjectHeading
+{SEBRAE's Early Stage program} {Mar 2021}
+During 6 weeks of Catalisa ICT I worked on modeling and validating the
+business
+model of MuoCare, a solution based on AI models for disease detection in dairy
+cattle.
+
+% copy and paste above \resumeProjectHeading block to add more
+
+\resumeSubHeadingListEnd
+
+
+%-----------Publications---------------
+\section{\texorpdfstring{PUBLICATIONS}{PUBLICATIONS}}
+
+{Unfortunately, I have not had the pleasure of participating in the
+publication
+of a published article. However, I hope to be able to fulfill this wish in the
+near future. For any references, my Lattes resume is available through this
+link}
+\href{[http://lattes.cnpq.br/0278549043500928]}{\color{blue}\underline{here}}
+
+
+%%%%%%%%%%%%  RESUME ENDS HERE  %%%%%%%%%%%%
 \end{document}
